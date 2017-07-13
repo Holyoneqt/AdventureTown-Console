@@ -48,6 +48,7 @@
     <Compile Include="Data\GameStorage.cs" />
     <Compile Include="Data\Items\ItemFactory.cs" />
     <Compile Include="Data\Items\NormalItems.cs" />
+    <Compile Include="Models\Gameplay\Helpers\DamageCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Models\Entities\Enemy\DefaultForestEnemy.cs" />
     <Compile Include="Models\Entities\Enemy\EntityEnemy.cs" />

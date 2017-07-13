@@ -56,14 +56,14 @@ namespace AdventureTown.UI.Screens.Forest
             if(_playerReport != null && _enemyReport != null)
             {
                 if(_playerReport.IsCriticalDamage)
-                    Console.WriteLine($"\nYou dealt {_playerReport.DamageDealt} Damage (CRITICAL) to {_playerReport.Target.Name}!");
+                    Console.WriteLine($"\nYou dealt {Math.Round(_playerReport.DamageDealt, 1)} Damage (CRITICAL) to {_playerReport.Target.Name}!");
                 else
-                    Console.WriteLine($"\nYou dealt {_playerReport.DamageDealt} Damage to {_playerReport.Target.Name}!");
+                    Console.WriteLine($"\nYou dealt {Math.Round(_playerReport.DamageDealt, 1)} Damage to {_playerReport.Target.Name}!");
 
                 if(_enemyReport.IsCriticalDamage)
-                    Console.WriteLine($"You received {_enemyReport.DamageDealt} Damage (CRITICAL) from {_enemyReport.DamageSource.Name}!");
+                    Console.WriteLine($"You received {Math.Round(_enemyReport.DamageDealt, 1)} Damage (CRITICAL) from {_enemyReport.DamageSource.Name}!");
                 else
-                    Console.WriteLine($"You received {_enemyReport.DamageDealt} Damage from {_enemyReport.DamageSource.Name}!");
+                    Console.WriteLine($"You received {Math.Round(_enemyReport.DamageDealt, 1)} Damage from {_enemyReport.DamageSource.Name}!");
             }
 
             Console.WriteLine("\nA = Attack, ...");

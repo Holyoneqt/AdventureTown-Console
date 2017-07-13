@@ -10,5 +10,7 @@ namespace AdventureTown.Data
     {
         public static int MaximumQuestAvailable = 3;
         public static double ExperieceConstant = 0.9;
+
+        public static double PowerDamageConstant = 2.5;
     }
 }

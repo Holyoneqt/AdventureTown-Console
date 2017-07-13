@@ -28,22 +28,17 @@ namespace AdventureTown.Models.Entities
 
         public AttackReport Attack(Entity target)
         {
-            bool isCrit = (GameStorage.Random.Next(100) < Attributes.Get(AttributeType.Lethality).Value);
-            double damage = (Attributes.Get(AttributeType.Power).Value * (isCrit ? 5 : 2.5));
+            DamageCalculator dmgCalc = new DamageCalculator(this, target);
+            double damage = dmgCalc.CalculateDamage();
             target.CurrentHealth -= damage;
-            
+
             return new AttackReport()
             {
                 DamageSource = this,
                 Target = target,
                 DamageDealt = damage,
-                IsCriticalDamage = isCrit
+                IsCriticalDamage = dmgCalc.IsCriticalDamage
             };
-        }
-
-        public void Update()
-        {
-
         }
     }
 }

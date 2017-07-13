@@ -20,6 +20,7 @@ namespace AdventureTown.Models.Entities.Enemy
             Attributes.Set(AttributeType.Stamina, 8);
             Attributes.Set(AttributeType.Power, 3);
             Attributes.Set(AttributeType.Lethality, 0);
+            Attributes.Set(AttributeType.Armor, 5);
 
             GoldValue = 5;
             Loot = ItemFactory.GenereateLoot(this);
