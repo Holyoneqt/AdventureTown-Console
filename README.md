@@ -4,7 +4,7 @@ A Small Game which is only played in the console.
 
 ## To-Do List:
 - Add Attributes
-    - [ ] Armor
+    - [x] Armor
 	    - Reduces Damage Taken
 	- [ ] Knowledge
 		- Increases XP gained, Increases Profession-Skill gained, ...
